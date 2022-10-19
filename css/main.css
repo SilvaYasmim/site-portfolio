@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+label {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideTopIn {
+    to {
+        top: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes lineDown {
+    0% {
+        transform: scale(1, 0);
+        transform-origin: top center;
+    }
+
+    25% {
+        transform: scale(1, 1);
+        transform-origin: top center;
+    }
+
+    75% {
+        transform: scale(1, 1);
+        transform-origin: top center;
+    }
+
+    76% {
+        transform: scale(1, 1);
+        transform-origin: bottom center;
+    }
+
+    100% {
+        transform: scale(1, 0);
+        transform-origin: bottom center;
+    }
+}
+
+@keyframes arrowdown {
+    0% {
+        bottom: 25px;
+    }
+
+    30% {
+        bottom: 15px;
+        opacity: 1;
+    }
+
+    70% {
+        bottom: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 5px;
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width:320px) {
+
+    .ys-page-wrapper,
+    .ys-preloader {
+        width: 100%;
+        height: 100vh;
+        display: table;
+        background-color: #1c1c1c;
+        border: 30px solid #000;
+
+    }
+
+    .ys-preloader {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .ys-preloader-inner {
+        margin-top: -45px;
+
+    }
+
+    .ys-overlay {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: rgba(44, 203, 105, 0.95);
+    }
+
+    .ys-modal {
+        width: 800px;
+        display: none;
+        padding: 30px;
+        border-radius: 0 30px 30px 30px;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1200;
+        opacity: 0;
+    }
+
+    .ys-modal-header,
+    .ys-modal-body,
+    .ys-form {
+        width: 100%;
+        display: table;
+        position: relative;
+    }
+
+    .ys-close-modal {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        color: #2ccb69;
+        text-align: center;
+        line-height: center;
+        cursor: pointer;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        border: none;
+        background-color: #2f2f2f;
+    }
+
+    .ys-form label {
+        margin-bottom: 10px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .ys-field,
+    .ys-textarea {
+        width: 100%;
+        background-color: #2f2f2f;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        text-indent: 15px;
+    }
+
+    .ys-field {
+        height: 45px;
+    }
+
+    .ys-topbar {
+        width: 100%;
+        height: 110px;
+        display: block;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .ys-logo {
+        width: 74px;
+        height: 110px;
+        float: left;
+        margin-left: 60px;
+        background-color: #2ccb69;
+        border-radius: 0 0 37px 0;
+
+    }
+
+    .ys-logo img {
+        width: 46px;
+        height: 31px;
+        display: block;
+        margin: 55px auto 0;
+    }
+
+    .ys-menu {
+        display: none;
+
+    }
+
+    .ys-btn-contact {
+        width: 45px;
+        height: 45px;
+        display: block;
+        background-color: #2ccb69;
+        background-image: url('../images/icon-contact-close.svg');
+        background-repeat: no-repeat;
+        position: fixed;
+        bottom: 45px;
+        right: 45px;
+        border-radius: 50%;
+        z-index: 200;
+        transition: all 0.2s ease-out;
+        border: none;
+        cursor: pointer;
+    }
+
+
+
+    .ys-contact-info {
+        width: 320px;
+        height: 165px;
+        padding: 25px;
+        position: fixed;
+        bottom: 115px;
+        right: 65px;
+        z-index: 200;
+        display: none;
+    }
+
+    .ys-contact-info-inner {
+        display: table;
+        width: 100%;
+        float: right;
+    }
+
+    .ys-contact-info-inner p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .ys-social-links {
+        width: 100%;
+        height: 45px;
+        display: block;
+        position: relative;
+        left: -12px;
+        margin-top: 7px;
+    }
+
+    .ys-social>img {
+        width: 20px;
+        height: auto;
+        display: block;
+        margin: 13px auto 0;
+    }
+
+    .ys-social {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+
+    }
+
+    .ys-corner {
+        width: 25px;
+        height: 25px;
+        display: block;
+        float: right;
+        display: relative;
+    }
+
+    .ys-corner::after {
+        content: '';
+        width: 25px;
+        height: 25px;
+        display: block;
+        position: absolute;
+        bottom: -23px;
+        right: 0;
+        background: transparent url('../images/corner.svg') no-repeat;
+
+    }
+
+    /*----HOME----*/
+
+    .ys-display-text {
+        margin-top: 10%;
+    }
+
+    #ys-home-presentation {
+        background-image: url('../images/yasmim-lemon-designer-home.png');
+        background-repeat: no-repeat;
+        background-position: 65% 40%;
+        position: relative;
+    }
+
+    .ys-scroll-down {
+        width: 70px;
+        height: 105px;
+        border-radius: 35px 35px 0 0;
+        background-color: #2ccb69;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 100;
+    }
+
+    .ys-arrow-down {
+        width: 100%;
+        height: 75px;
+        display: table;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .ys-arrow-down img {
+        width: 16px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+        animation: arrowdown 1.5s linear 1.5s infinite;
+    }
+
+    .ys-arrow-down::before {
+        content: '';
+        width: 2px;
+        height: 45px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: #000;
+        animation: lineDown 1.5s ease-out infinite;
+        transform-origin: top center;
+    }
+}
+
+@media screen and (min-width:576px) {}
+
+@media screen and (min-width:768px) {}
+
+@media screen and (min-width:992px) {
+    .ys-menu {
+        display: table;
+        float: left;
+        height: 110px;
+        margin-left: 30px;
+    }
+
+    .ys-menu a {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        color: #bcbcbc;
+        text-decoration: none;
+        text-transform: lowercase;
+        display: inline-block;
+        margin: 50px 20px 0 20px;
+        margin-top: 50px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .ys-menu a:first-child {
+        margin-left: 0;
+    }
+
+    .ys-menu a:hover {
+        color: #2ccb69;
+    }
+
+    .ys-menu a:before {
+        content: '';
+        width: 0;
+        height: 4px;
+        background-color: #2ccb69;
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    .ys-menu a:hover::before {
+        width: 100%;
+    }
+
+    @media screen and (min-width:1200px) {}
+
+    @media screen and (min-width:1364px) {}
+
+    @media screen and (min-width:1600px) {}
+
+    /* CLASSES UTILITARIAS */
+
+    .ys-title {
+        font-family: 'Abril Fatface', serif;
+        font-weight: normal;
+    }
+
+    .ys-title-big {
+        font-size: 120px;
+    }
+
+    .ys-text-green {
+        color: #2ccb69;
+    }
+
+    .ys-text-dark {
+        color: #4d4c4c;
+    }
+
+    .ys-text-light {
+        color: #bcbcbc;
+    }
+
+    .ys-text-black {
+        color: #000;
+    }
+
+    .ys-bg-green {
+        background-color: #2ccb69;
+    }
+
+    .ys-bg-dark {
+        background-color: #4d4c4c;
+    }
+
+    .ys-bg-light {
+        background-color: #bcbcbc;
+    }
+
+    .ys-bg-black {
+        background-color: #000;
+    }
+
+    .ys-mar-15 {
+        margin: 15px;
+    }
+
+    .ys-mar-top-15 {
+        margin-top: 15px;
+    }
+
+    .ys-mar-right-15 {
+        margin-right: 15px;
+    }
+
+    .ys-mar-bottom-15 {
+        margin-bottom: 15px;
+    }
+
+    .ys-mar-left-15 {
+        margin-left: 15px;
+    }
+
+    .ys-Pad-15 {
+        padding: 15px;
+    }
+
+    .ys-Pad-top-15 {
+        padding-top: 15px;
+    }
+
+    .ys-Pad-right-15 {
+        padding-right: 15px;
+    }
+
+    .ys-Pad-bottom-15 {
+        padding-bottom: 15px;
+    }
+
+    .ys-Pad-left-15 {
+        padding-left: 15px;
+    }
+
+    .ys-full-height {
+        height: 100vh;
+    }
+
+    .ys-first-section {
+        height: calc(100vh - 30px);
+    }
+
+    /* BOTÕES */
+    .ys-btn {
+        display: table;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        border: none;
+        transition: all 0.2 ease-out;
+        text-transform: lowercase;
+    }
+
+    .ys-btn-block {
+        display: block;
+        width: 100%;
+    }
+
+    .ys-btn-small {
+        height: 28px;
+        padding: 0 20px;
+        border-radius: 14px;
+        font-size: 11px;
+    }
+
+    .ys-btn-medium {
+        height: 38px;
+        padding: 0 27px;
+        border-radius: 19px;
+        font-size: 14px;
+    }
+
+    .ys-btn-large {
+        height: 45px;
+        padding: 0 35px;
+        border-radius: 23px;
+        font-size: 16px;
+    }
+
+    .ys-btn-green {
+        background-color: #2ccb69;
+        color: #1c1c1c;
+    }
+
+    .ys-btn-green:hover {
+        background-color: rgb(6, 135, 55);
+        color: #fff;
+    }
+
+    .ys-btn-dark {
+        background-color: #151515;
+        color: #2ccb69;
+    }
+
+    .ys-btn-dark:hover {
+        background-color: #2f2f2f;
+        color: #fff;
+    }
+}
+
+/* CLASSES DE COMPORTAMENTO */
+
+.ys-is-open {
+    display: block;
+}
+
+.ys-slide-top-in {
+    animation: slideTopIn 0.6s forwards cubic-bezier(0, 1.11, .6, .89);
+}
+
+.ys-change-icon {
+    background-position-y: -45px;
+}
+
+.ys-fade-out {
+    animation: fadeOut 2s forwards ease-out;
+}
