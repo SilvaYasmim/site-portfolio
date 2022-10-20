@@ -33,3 +33,14 @@ for (var i = 0; i < toggleModal.length; i++) {
         modalOrcamento.classList.toggle('ys-slide-top-in');
     });
 }
+
+//animando elementos on scroll com waypoints//
+var myScrollDown = document.querySelector('.ys-scroll-down');
+var waypoint = new Waypoint({
+    element: myScrollDown,
+    handler: function () {
+        myScrollDown.classList.toggle('ys-fade-out');
+    },
+    offset: '50%'
+})
+
