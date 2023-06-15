@@ -41,6 +41,6 @@ var waypoint = new Waypoint({
     handler: function () {
         myScrollDown.classList.toggle('ys-fade-out');
     },
-    offset: '50%'
-})
+    offset: '80%'
+});
 
