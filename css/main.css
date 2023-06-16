@@ -403,7 +403,6 @@ label {
 }
 
 .ys-item-navigator a.ys-item-active {
-    width: 90px;
     background-color: #2ccb69;
 }
 
