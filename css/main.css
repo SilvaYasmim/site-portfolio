@@ -447,7 +447,7 @@ ion-icon {
 }
 
 .ys-slider-container {
-    background-color: white;
+
     display: block;
     overflow: hidden;
 }
@@ -456,7 +456,6 @@ ion-icon {
     width: auto;
     height: 700px;
     display: block;
-    background-color: deeppink;
     list-style: none;
 }
 
@@ -464,6 +463,29 @@ ion-icon {
     display: block;
     height: 500px;
     float: left;
+    margin-top: calc(26vh - 75px);
+}
+
+.ys-portfolio-item-info {
+    width: 100%;
+    display: table;
+    margin-top: 59px;
+}
+
+.ys-portfolio-item-thumb {
+    width: 100%;
+    background-color: #2c2c2c;
+    display: table;
+    padding: 75px 0;
+
+}
+
+.ys-portfolio-item-thumb img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: -75px;
 }
 
 @media screen and (min-width:576px) {}
@@ -528,7 +550,11 @@ ion-icon {
         font-weight: normal;
     }
 
-    .ys-title-big {
+    .ys-title-large {
+        font-size: 64px;
+    }
+
+    .ys-title-xlarge {
         font-size: 120px;
     }
 
@@ -602,6 +628,49 @@ ion-icon {
 
     .ys-Pad-left-15 {
         padding-left: 15px;
+    }
+
+
+
+
+    .ys-mar-30 {
+        margin: 30px;
+    }
+
+    .ys-mar-top-30 {
+        margin-top: 30px;
+    }
+
+    .ys-mar-right-30 {
+        margin-right: 30px;
+    }
+
+    .ys-mar-bottom-30 {
+        margin-bottom: 30px;
+    }
+
+    .ys-mar-left-30 {
+        margin-left: 30px;
+    }
+
+    .ys-Pad-30 {
+        padding: 30px;
+    }
+
+    .ys-Pad-top-30 {
+        padding-top: 30px;
+    }
+
+    .ys-Pad-right-30 {
+        padding-right: 30px;
+    }
+
+    .ys-Pad-bottom-30 {
+        padding-bottom: 30px;
+    }
+
+    .ys-Pad-left-30 {
+        padding-left: 30px;
     }
 
     .ys-full-height {
