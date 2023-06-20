@@ -51,7 +51,8 @@ var nextSlideAnim = function () {
 
     anime({
         targets: sliderList,
-        translateX: sliderPos
+        translateX: sliderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 }
 
@@ -65,7 +66,8 @@ var prevSlideAnim = function () {
 
     anime({
         targets: sliderList,
-        translateX: sliderPos
+        translateX: sliderPos,
+        easing: 'cubicBezier(0,1.01,.32,1)'
     });
 }
 
@@ -116,6 +118,19 @@ var setActiveNav = function () {
     }
 }
 
+//Set Active Slide
+var setActiveSlide = function () {
+
+    for (var sld = 0; sld < sliderItem.length; sld++) {
+        let mySlideNum = parseInt(sliderItem[sld].getAttribute('data-slide'));
+
+        if (mySlideNum === currentCounter) {
+            sliderItem[sld].classList.add('ys-slide-active');
+            sliderItem[sld].querySelector('.ys-portfolio-item-box').classList.add('ys-scale-right')
+        }
+    }
+}
+
 var changeActive = function () {
     for (var rm = 0; rm < navItems.length; rm++) {
         navItems[rm].classList.remove('ys-item-active');
@@ -125,7 +140,11 @@ var changeActive = function () {
         });
     }
 
+    for (var rms = 0; rms < sliderItem.length; rms++) {
+        sliderItem[rms].classList.remove('ys-slide-active');
+    }
     setActiveNav();
+    setActiveSlide();
 }
 
 //ACTIONS

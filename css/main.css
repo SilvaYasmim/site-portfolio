@@ -24,6 +24,12 @@ label {
     }
 }
 
+@keyframes scaleRight {
+    to {
+        transform: scaleX(1);
+    }
+}
+
 @keyframes lineDown {
     0% {
         transform: scale(1, 0);
@@ -467,17 +473,29 @@ ion-icon {
 }
 
 .ys-portfolio-item-info {
-    width: 100%;
+    width: calc(100% - 75px);
     display: table;
     margin-top: 59px;
 }
 
 .ys-portfolio-item-thumb {
     width: 100%;
-    background-color: #2c2c2c;
     display: table;
     padding: 75px 0;
+    position: relative;
 
+}
+
+.ys-portfolio-item-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #2c2c2c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
 .ys-portfolio-item-thumb img {
@@ -760,6 +778,10 @@ ion-icon {
 
 .ys-fade-out {
     animation: fadeOut 2s forwards ease-out;
+}
+
+.ys-scale-right {
+    animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0, 1.01, .32, 1);
 }
 
 .ys-no-radios-left {
