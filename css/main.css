@@ -17,6 +17,13 @@ label {
     }
 }
 
+@keyframes fadeFromLeft {
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
 @keyframes slideTopIn {
     to {
         top: 15%;
@@ -27,6 +34,12 @@ label {
 @keyframes scaleRight {
     to {
         transform: scaleX(1);
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
     }
 }
 
@@ -184,6 +197,7 @@ label {
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 900;
     }
 
     .ys-logo {
@@ -476,14 +490,23 @@ ion-icon {
     width: calc(100% - 75px);
     display: table;
     margin-top: 59px;
+    position: relative;
+    opacity: 0;
+    left: -75px;
 }
 
 .ys-portfolio-item-thumb {
     width: 100%;
     display: table;
-    padding: 75px 0;
+    padding: 75px 0 19px 0;
     position: relative;
 
+}
+
+.ys-portfolio-item-thumb>button {
+    margin-top: 17px;
+    margin-right: 75px;
+    float: right;
 }
 
 .ys-portfolio-item-box {
@@ -504,6 +527,7 @@ ion-icon {
     height: auto;
     position: relative;
     left: -75px;
+    transform: scale(0);
 }
 
 @media screen and (min-width:576px) {}
@@ -709,6 +733,15 @@ ion-icon {
         border: none;
         transition: all 0.2 ease-out;
         text-transform: lowercase;
+        position: relative;
+    }
+
+    .ys-btn ion-icon {
+        font-size: 21px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 2px;
+        margin-top: -5px;
     }
 
     .ys-btn-block {
@@ -718,6 +751,7 @@ ion-icon {
 
     .ys-btn-small {
         height: 28px;
+        line-height: 28px;
         padding: 0 20px;
         border-radius: 14px;
         font-size: 11px;
@@ -725,6 +759,7 @@ ion-icon {
 
     .ys-btn-medium {
         height: 38px;
+        line-height: 38px;
         padding: 0 27px;
         border-radius: 19px;
         font-size: 14px;
@@ -732,6 +767,7 @@ ion-icon {
 
     .ys-btn-large {
         height: 45px;
+        line-height: 45px;
         padding: 0 35px;
         border-radius: 23px;
         font-size: 16px;
@@ -780,8 +816,16 @@ ion-icon {
     animation: fadeOut 2s forwards ease-out;
 }
 
+.ys-fade-from-left {
+    animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0, 1.01, .32, 1);
+}
+
 .ys-scale-right {
     animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0, 1.01, .32, 1);
+}
+
+.ys-scale-up {
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0, 1.01, .32, 1);
 }
 
 .ys-no-radios-left {

@@ -126,7 +126,9 @@ var setActiveSlide = function () {
 
         if (mySlideNum === currentCounter) {
             sliderItem[sld].classList.add('ys-slide-active');
-            sliderItem[sld].querySelector('.ys-portfolio-item-box').classList.add('ys-scale-right')
+            sliderItem[sld].querySelector('.ys-portfolio-item-box').classList.add('ys-scale-right');
+            sliderItem[sld].querySelector('.ys-portfolio-item-thumb img').classList.add('ys-scale-up');
+            sliderItem[sld].querySelector('.ys-portfolio-item-info').classList.add('ys-fade-from-left');
         }
     }
 }
@@ -140,8 +142,11 @@ var changeActive = function () {
         });
     }
 
-    for (var rms = 0; rms < sliderItem.length; rms++) {
+    for (var rms = 0; rms < (sliderItem.length); rms++) {
         sliderItem[rms].classList.remove('ys-slide-active');
+        sliderItem[rms].querySelector('.ys-portfolio-item-box').classList.remove('ys-scale-right');
+        sliderItem[rms].querySelector('.ys-portfolio-item-thumb img').classList.remove('ys-scale-up');
+        sliderItem[rms].querySelector('.ys-portfolio-item-info').classList.remove('ys-fade-from-left');
     }
     setActiveNav();
     setActiveSlide();
