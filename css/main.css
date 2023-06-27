@@ -479,14 +479,18 @@ ion-icon {
     list-style: none;
 }
 
-.ys-slider-item {
+.ys-slider-list .ys-portfolio-item {
     display: block;
     height: 500px;
     float: left;
     margin-top: calc(26vh - 75px);
 }
 
-.ys-portfolio-item-info {
+.ys-portfolio-list .ys-portfolio-item {
+    margin-bottom: 100px;
+}
+
+.ys-slider-list .ys-portfolio-item-info {
     width: calc(100% - 75px);
     display: table;
     margin-top: 59px;
@@ -495,7 +499,17 @@ ion-icon {
     left: -75px;
 }
 
-.ys-portfolio-item-thumb {
+.ys-portfolio-list .ys-portfolio-item-info {
+    width: calc(100% - 105px);
+}
+
+.ys-portfolio-list {
+    list-style: none;
+}
+
+
+.ys-slider-list .ys-portfolio-item-thumb,
+.ys-portfolio-list .ys-portfolio-item-thumb {
     width: 100%;
     display: table;
     padding: 75px 0 19px 0;
@@ -503,13 +517,15 @@ ion-icon {
 
 }
 
-.ys-portfolio-item-thumb>button {
+.ys-slider-list .ys-portfolio-item-thumb>button,
+.ys-portfolio-list .ys-portfolio-item-thumb>button {
     margin-top: 17px;
     margin-right: 75px;
     float: right;
 }
 
-.ys-portfolio-item-box {
+.ys-slider-list .ys-portfolio-item-box,
+.ys-portfolio-list .ys-portfolio-item-box {
     width: 100%;
     height: 100%;
     display: block;
@@ -521,13 +537,37 @@ ion-icon {
     transform-origin: right;
 }
 
-.ys-portfolio-item-thumb img {
+.ys-portfolio-list .ys-portfolio-item-box {
+    transform: scaleX(1);
+}
+
+.ys-slider-list .ys-portfolio-item-thumb img,
+.ys-portfolio-list .ys-portfolio-item-thumb img {
     width: 100%;
     max-width: 100%;
     height: auto;
     position: relative;
     left: -75px;
     transform: scale(0);
+}
+
+.ys-portfolio-list .ys-portfolio-item-thumb img {
+    transform: scale(1);
+}
+
+/*----PORTFOLIO----*/
+
+.ys-section-offset-top {
+    margin-top: 130px;
+}
+
+.ys-portfolio-list .ys-portfolio-item:nth-child(odd) .ys-portfolio-item-info {
+    text-align: right;
+    margin-top: 70px;
+}
+
+.ys-portfolio-list .ys-portfolio-item:nth-child(odd) .ys-portfolio-item-info button {
+    float: right;
 }
 
 @media screen and (min-width:576px) {}
