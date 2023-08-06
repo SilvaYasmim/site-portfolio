@@ -10,9 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
-    <title>Yasmim Silva - UX/UI Designer</title>
+    <title>Yasmim Silva - UX/UI Designer - Portfolio</title>
 </head>
 
 <body>
@@ -24,63 +25,6 @@
 
     </div>
 
-    <div class="ys-overlay ys-toggle-modal"></div>
-
-    <div class="ys-modal ys-bg-black" id="ys-modal-orcamento">
-        <div class="ys-modal-header">
-            <h1 class="ys-title ys-text-green ys-toggle-modal">
-                Solicite um orçamento
-            </h1>
-            <button class="ys-close-modal ys-toggle-modal">
-                X
-            </button>
-        </div>
-        <div class="ys-modal-body">
-            <div class="row">
-                <div class="col-sm-12">
-                    <p class="ys-text-light">Por favor informe os dados abaixo e eu entrarei em contato com você o mais
-                        breve
-                        possível.</p>
-
-                </div>
-            </div>
-            <div class="row ys-mar-top-15">
-                <div class="col-sm-12">
-                    <form class="ys-form">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 ys-mar-bottom-15">
-                                <label for="Nome" class="ys-text-light">Nome</label>
-                                <input type="text" name="Nome" id="ys-nome" class="ys-field" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 ys-mar-bottom-15">
-                                <label for="Email" class="ys-text-light">Email</label>
-                                <input type="email" name="Email" id="ys-email" class="ys-field" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 ys-mar-bottom-15">
-                                <label for="Telefone" class="ys-text-light">Telefone</label>
-                                <input type="tel" name="Telefone" id="ys-Telefone" class="ys-field" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 ys-mar-bottom-15">
-                                <label for="Site" class="ys-text-light">Site</label>
-                                <input type="text" name="Site" id="ys-Site" class="ys-field" />
-                            </div>
-                            <div class="col-sm-12 col-md-12 ys-mar-top-15 ys-mar-bottom-15 ">
-                                <label for="Mensagem" class="ys-text-light"> Descreva abaixo o projeto na qual você
-                                    precisa de orçamento: </label>
-                                <textarea id="ys-mensagem" name="Mensagem" rows="8" class="ys-textarea"></textarea>
-                            </div>
-                        </div>
-                        <div class="row justify-content-end ys-mar-top-15">
-                            <div class="col-sm-12 col-md-6">
-                                <button class="ys-btn ys-btn-large ys-btn-green ys-btn-block">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     </div>
 
     <header class="ys-topbar">
@@ -88,9 +32,9 @@
             <img src="../images/logo-yasmim.svg" alt="Logo João lemon UX/UI Designer">
         </div>
         <nav class="ys-menu">
-            <a href="#">Home</a>
-            <a href="Pages/portfolio.html">Portfolio</a>
-            <a href="Pages/portfolio.html">Sobre</a>
+            <a href="../index.html">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="sobre.html">Sobre</a>
         </nav>
 
     </header>
@@ -133,7 +77,8 @@
                         <li class="ys-portfolio-item ys-slide-active" data-slide="1">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="ys-portfolio-item-info ys-text-light">
+                                    <div class="ys-portfolio-item-info ys-text-light" data-aos-delay="200"
+                                        data-aos="fade-right">
                                         <h1 class="ys-title ys-title-large ys-mar-bottom-15">Fun Box Product
                                             Design</h1>
                                         <p class="ys-mar-bottom-30">UX/UI e design de produto para criação de
@@ -145,8 +90,9 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="ys-portfolio-item-thumb">
-                                        <div class="ys-portfolio-item-box"></div>
-                                        <img src="../images/yasmim-fun box.png" alt="Fun box" title="Fun box" />
+                                        <div class="ys-portfolio-item-box" data-aos="zoom-in"></div>
+                                        <img src="../images/yasmim-fun box.png" alt="Fun box" title="Fun box"
+                                            data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" />
                                         <button class="ys-btn ys-btn-medium ys-btn-dark">Visitar projeto
                                             <ion-icon name="arrow-redo"></ion-icon></button>
                                     </div>
@@ -155,7 +101,8 @@
                         <li class="ys-portfolio-item" data-slide="2">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="ys-portfolio-item-info ys-text-light">
+                                    <div class="ys-portfolio-item-info ys-text-light" data-aos-delay="200"
+                                        data-aos="fade-left">
                                         <h1 class="ys-title ys-title-large ys-mar-bottom-15">Selo verde
                                             e-comerce.</h1>
                                         <p class="ys-mar-bottom-30">UX/UI e prototipação para site de vendas</p>
@@ -166,9 +113,9 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="ys-portfolio-item-thumb">
-                                        <div class="ys-portfolio-item-box"></div>
-                                        <img src="../images/yasmim-selo-verde.png" alt="Selo verde"
-                                            title="Selo Verde" />
+                                        <div class="ys-portfolio-item-box" data-aos="zoom-in"></div>
+                                        <img src="../images/yasmim-selo-verde.png" alt="Selo verde" title="Selo Verde"
+                                            data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" />
                                         <button class="ys-btn ys-btn-medium ys-btn-dark">Visitar projeto
                                             <ion-icon name="arrow-redo"></ion-icon></button>
                                     </div>
@@ -178,7 +125,8 @@
                         <li class="ys-portfolio-item" data-slide="3">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="ys-portfolio-item-info ys-text-light">
+                                    <div class="ys-portfolio-item-info ys-text-light" data-aos-delay="200"
+                                        data-aos="fade-right">
                                         <h1 class="ys-title ys-title-large ys-mar-bottom-15">Marinha do Tejo
                                         </h1>
                                         <p class="ys-mar-bottom-30">UX/UI e proposta de remodelação do site da
@@ -190,9 +138,10 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="ys-portfolio-item-thumb">
-                                        <div class="ys-portfolio-item-box"></div>
+                                        <div class="ys-portfolio-item-box" data-aos="zoom-in"></div>
                                         <img src="../images/yasmim-marinha-do-tejo.png" alt="Marinha do tejo"
-                                            title="marinha do tejo" />
+                                            title="marinha do tejo" data-aos="flip-left" data-aos-offset="300"
+                                            data-aos-delay="300" />
                                         <button class="ys-btn ys-btn-medium ys-btn-dark">Visitar projeto
                                             <ion-icon name="arrow-redo"></ion-icon></button>
                                     </div>
@@ -202,7 +151,8 @@
                         <li class="ys-portfolio-item" data-slide="4">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="ys-portfolio-item-info ys-text-light">
+                                    <div class="ys-portfolio-item-info ys-text-light" data-aos-delay="200"
+                                        data-aos="fade-left">
                                         <h1 class="ys-title ys-title-large ys-mar-bottom-15">GBT Solutions
                                         </h1>
                                         <p class="ys-mar-bottom-30">UX/UI e remodelação do site da GBT embbed
@@ -214,9 +164,10 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="ys-portfolio-item-thumb">
-                                        <div class="ys-portfolio-item-box"></div>
+                                        <div class="ys-portfolio-item-box" data-aos="zoom-in"></div>
                                         <img src="../images/yasmim-GTB solutions.png" alt="Gbt solutions"
-                                            title="gbt solutions" />
+                                            title="gbt solutions" data-aos="flip-left" data-aos-offset="300"
+                                            data-aos-delay="300" />
                                         <button class="ys-btn ys-btn-medium ys-btn-dark">Visitar site <ion-icon
                                                 name="arrow-redo"></ion-icon></button>
                                     </div>
@@ -226,7 +177,8 @@
                         <li class="ys-portfolio-item" data-slide="5">
                             <div class="row">
                                 <div class="col-sm-5">
-                                    <div class="ys-portfolio-item-info ys-text-light">
+                                    <div class="ys-portfolio-item-info ys-text-light" data-aos-delay="200"
+                                        data-aos="fade-right">
                                         <h1 class="ys-title ys-title-large ys-mar-bottom-15">Mimos da Valentina
                                         </h1>
                                         <p class="ys-mar-bottom-30">UX/UI e criação de site e-comerce de
@@ -238,9 +190,10 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="ys-portfolio-item-thumb">
-                                        <div class="ys-portfolio-item-box"></div>
+                                        <div class="ys-portfolio-item-box" data-aos="zoom-in"></div>
                                         <img src="../images/yasmim-mimos-da-valentina-beagle.png"
-                                            alt="mimos da valentina" title="mimos da valentina" />
+                                            alt="mimos da valentina" title="mimos da valentina" data-aos="flip-left"
+                                            data-aos-offset="300" data-aos-delay="300" />
                                         <button class="ys-btn ys-btn-medium ys-btn-dark">Site em construção
                                             <ion-icon name="arrow-redo"></ion-icon></button>
                                     </div>
@@ -254,10 +207,13 @@
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.js"></script>
-    <script src="../js/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

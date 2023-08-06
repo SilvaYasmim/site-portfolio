@@ -263,7 +263,8 @@ label {
         line-height: 24px;
     }
 
-    .ys-social-links {
+    .ys-social-links,
+    .ys-social-links-circle {
         width: 100%;
         height: 45px;
         display: block;
@@ -272,18 +273,43 @@ label {
         margin-top: 7px;
     }
 
+    .ys-social-links-circle {
+        left: 0;
+    }
+
+    .ys-social,
+    .ys-social-links-circle .ys-social {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+
+    }
+
+    .ys-social-links-circle .ys-social {
+        border-radius: 50%;
+        text-align: center;
+        transition: all 0.2s ease-out;
+
+    }
+
+    .ys-social-links-circle .ys-social ion-icon {
+        height: 45px;
+        transition: all 0.2s ease-out;
+    }
+
+    .ys-social-links-circle .ys-social:hover {
+        background-color: #000;
+    }
+
+    .ys-social-links-circle .ys-social:hover ion-icon {
+        color: #2ccb69;
+    }
+
     .ys-social>img {
         width: 20px;
         height: auto;
         display: block;
         margin: 13px auto 0;
-    }
-
-    .ys-social {
-        width: 45px;
-        height: 45px;
-        display: inline-block;
-
     }
 
     .ys-corner {
@@ -524,8 +550,7 @@ ion-icon {
     float: right;
 }
 
-.ys-slider-list .ys-portfolio-item-box,
-.ys-portfolio-list .ys-portfolio-item-box {
+.ys-slider-list .ys-portfolio-item-box {
     width: 100%;
     height: 100%;
     display: block;
@@ -538,11 +563,20 @@ ion-icon {
 }
 
 .ys-portfolio-list .ys-portfolio-item-box {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #2c2c2c;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ys-portfolio-list .ys-portfolio-item-box {
     transform: scaleX(1);
 }
 
-.ys-slider-list .ys-portfolio-item-thumb img,
-.ys-portfolio-list .ys-portfolio-item-thumb img {
+.ys-slider-list .ys-portfolio-item-thumb img {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -552,7 +586,11 @@ ion-icon {
 }
 
 .ys-portfolio-list .ys-portfolio-item-thumb img {
-    transform: scale(1);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: -75px;
 }
 
 /*----PORTFOLIO----*/
@@ -569,6 +607,32 @@ ion-icon {
 .ys-portfolio-list .ys-portfolio-item:nth-child(odd) .ys-portfolio-item-info button {
     float: right;
 }
+
+.ys-portfolio-list .ys-portfolio-item:nth-child(even) .ys-portfolio-item-info {
+    margin-left: 105px;
+}
+
+.ys-portfolio-list .ys-portfolio-item:nth-child(even)>.row {
+    flex-direction: row-reverse;
+}
+
+.ys-portfolio-list .ys-portfolio-item:nth-child(even) .ys-portfolio-item-thumb button {
+    float: left;
+    margin-left: 75px;
+}
+
+.ys-portfolio-list .ys-portfolio-item:nth-child(even) .ys-portfolio-item-thumb img {
+    left: 75px;
+}
+
+/*----SOBRE----*/
+
+#ys-avatar-sobre img {
+    position: relative;
+    left: -15px;
+}
+
+
 
 @media screen and (min-width:576px) {}
 
@@ -630,6 +694,11 @@ ion-icon {
     .ys-title {
         font-family: 'Abril Fatface', serif;
         font-weight: normal;
+    }
+
+    .ys-subtitle {
+        font-family: 'Open Sans', serif;
+        font-weight: 800;
     }
 
     .ys-title-large {
@@ -836,6 +905,46 @@ ion-icon {
 
 .ys-no-padding {
     padding: 0 !important;
+}
+
+.ys-box-img {
+    width: 100%;
+    display: table;
+}
+
+.ys-img-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.ys-page-list {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.ys-page-list>li {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    position: relative;
+
+}
+
+.ys-page-list>li:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: #2ccb69;
 }
 
 /* CLASSES DE COMPORTAMENTO */
