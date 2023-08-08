@@ -632,6 +632,59 @@ ion-icon {
     left: -15px;
 }
 
+/*----DETALHES----*/
+
+.ys-hero {
+    height: 500px;
+    background-image: url('../pages/portfolio/img/hero-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.ys-hero h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.ys-hero-inner {
+    height: 500px;
+
+}
+
+.ys-hero-inner-content {
+    position: relative;
+    /*Stacking Context*/
+    z-index: 10;
+}
+
+.ys-hero-inner-content:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: block;
+    position: absolute;
+    left: -55px;
+    top: -55px;
+    box-sizing: content-box;
+    padding: 55px;
+    z-index: 5;
+}
+
+.ys-hero-inner-content>.row {
+    position: relative;
+    z-index: 6;
+}
+
+.ys-project-stats {
+    width: 100%;
+    height: 100%;
+    display: table;
+    border-right: 1px solid #2ccb69;
+
+}
 
 
 @media screen and (min-width:576px) {}
