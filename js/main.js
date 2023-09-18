@@ -34,6 +34,10 @@ for (var i = 0; i < toggleModal.length; i++) {
     });
 }
 
+var postGallery = document.querySelector('.ys-post-gallery');
+var postGalleryHeight = postGallery.clientHeight
+postGallery.style.height = (postGalleryHeight - 270) + 'px';
+
 //animando elementos on scroll com waypoints//
 var myScrollDown = document.querySelector('.ys-scroll-down');
 var waypoint = new Waypoint({
@@ -43,4 +47,7 @@ var waypoint = new Waypoint({
     },
     offset: '80%'
 });
+
+
+
 

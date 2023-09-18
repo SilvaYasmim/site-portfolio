@@ -644,7 +644,6 @@ ion-icon {
 }
 
 .ys-hero h1 {
-    font-size: 48px;
     margin-bottom: 50px;
 }
 
@@ -657,6 +656,10 @@ ion-icon {
     position: relative;
     /*Stacking Context*/
     z-index: 10;
+}
+
+.ys-hero-inner-content p {
+    margin-bottom: 15px;
 }
 
 .ys-hero-inner-content:before {
@@ -686,6 +689,95 @@ ion-icon {
 
 }
 
+.ys-post {
+    width: 100%;
+    display: table;
+}
+
+.ys-post p {
+    margin-bottom: 30px;
+}
+
+.ys-post-section {
+    width: 100%;
+    display: table;
+    padding: 45px 0;
+}
+
+.ys-pre-gallery {
+    padding-bottom: 350px;
+}
+
+.ys-post-gallery {
+    display: block;
+}
+
+.ys-post-gallery .container {
+    position: relative;
+    top: -270px;
+}
+
+.ys-gallery-frame-container {
+    width: 400px;
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1100;
+}
+
+.ys-gallery-frame-inner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+
+.ys-close-gallery {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-color: #000;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: -15px;
+    right: -45px;
+    z-index: 1200;
+}
+
+.ys-close-gallery ion-icon {
+    color: #2ccb69;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+
+img.ys-gallery-frame {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1300;
+}
+
+.ys-gallery-frame-image {
+    width: 87%;
+    max-width: 87%;
+    margin: 0 auto;
+    display: block;
+    z-index: 1200;
+    border-radius: 30px;
+    position: relative;
+    top: 20px;
+}
 
 @media screen and (min-width:576px) {}
 
@@ -754,6 +846,10 @@ ion-icon {
         font-weight: 800;
     }
 
+    .ys-text-medium {
+        font-size: 48px;
+    }
+
     .ys-title-large {
         font-size: 64px;
     }
@@ -776,6 +872,10 @@ ion-icon {
 
     .ys-text-black {
         color: #000;
+    }
+
+    .ys-text-center {
+        text-align: center;
     }
 
     .ys-bg-green {
