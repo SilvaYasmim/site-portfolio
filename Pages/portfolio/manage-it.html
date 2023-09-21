@@ -34,7 +34,30 @@
                 <ion-icon name="close-outline"></ion-icon>
             </button>
             <img src="img/frame-smartphone.png" class="ys-gallery-frame" />
-            <img src="" class="ys-gallery-frame-image" />
+
+            <div class="ys-skeleton-loading">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <img src="" class="ys-gallery-frame-image" data-index="" />
+        </div>
+
+        <div class="ys-items-next-prev">
+            <div class="ys-item-prev">
+                <ion-icon name="caret-back-sharp"></ion-icon>
+            </div>
+
+            <div class="ys-items-counter">
+                <span class="ys-current-slide">01</span>
+                /
+                <span class="ys-total-slide">05</span>
+            </div>
+
+            <div class="ys-item-next">
+                <ion-icon name="caret-forward-sharp"></ion-icon>
+            </div>
         </div>
     </div>
 
@@ -218,52 +241,64 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app1.png" src="img/app1-low.gif" alt="tela do app fun box 1"
-                                title="tela do app funbox 1" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="1" data-src="img/app1.png" src="img/app1-low.gif"
+                                alt="tela do app fun box 1" title="tela do app funbox 1"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app2.jpg" src="img/app2-low.gif" alt="tela do app fun box 2"
-                                title="tela do app funbox 2" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="2" data-src="img/app2.jpg" src="img/app2-low.gif"
+                                alt="tela do app fun box 2" title="tela do app funbox 2"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app3.png" src="img/app3-low.gif" alt="tela do app fun box 3"
-                                title="tela do app funbox 3" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="3" data-src="img/app3.png" src="img/app3-low.gif"
+                                alt="tela do app fun box 3" title="tela do app funbox 3"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app4.jpg" src="img/app4-low.gif" alt="tela do app fun box 4"
-                                title="tela do app funbox 4" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="4" data-src="img/app4.jpg" src="img/app4-low.gif"
+                                alt="tela do app fun box 4" title="tela do app funbox 4"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app5.jpg" src="img/app5-low.gif" alt="tela do app fun box 5"
-                                title="tela do app funbox 5" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="5" data-src="img/app5.jpg" src="img/app5-low.gif"
+                                alt="tela do app fun box 5" title="tela do app funbox 5"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app6.png" src="img/app6-low.gif" alt="tela do app fun box 6"
-                                title="tela do app funbox 6" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="6" data-src="img/app6.png" src="img/app6-low.gif"
+                                alt="tela do app fun box 6" title="tela do app funbox 6"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app7.png" src="img/app7-low.gif" alt="tela do app fun box 7"
-                                title="tela do app funbox 7" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="7" data-src="img/app7.png" src="img/app7-low.gif"
+                                alt="tela do app fun box 7" title="tela do app funbox 7"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app8.png" src="img/app8-low.gif" alt="tela do app fun box 8"
-                                title="tela do app funbox 8" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="8" data-src="img/app8.png" src="img/app8-low.gif"
+                                alt="tela do app fun box 8" title="tela do app funbox 8"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app9.jpg" src="img/app9-low.gif" alt="tela do app fun box 9"
-                                title="tela do app funbox 9" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="9" data-src="img/app9.jpg" src="img/app9-low.gif"
+                                alt="tela do app fun box 9" title="tela do app funbox 9"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app10.png" src="img/app10-low.gif" alt="tela do app fun box 10"
-                                title="tela do app funbox 10" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="10" data-src="img/app10.png" src="img/app10-low.gif"
+                                alt="tela do app fun box 10" title="tela do app funbox 10"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app11.png" src="img/app11-low.gif" alt="tela do app fun box 11"
-                                title="tela do app funbox 11" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="11" data-src="img/app11.png" src="img/app11-low.gif"
+                                alt="tela do app fun box 11" title="tela do app funbox 11"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                         <div class="col-sm-3 ys-mar-bottom-30">
-                            <img data-src="img/app12.png" src="img/app12-low.gif" alt="tela do app fun box 12"
-                                title="tela do app funbox 12" class="ys-img-responsive ys-thumb-img" />
+                            <img data-item="12" data-src="img/app12.png" src="img/app12-low.gif"
+                                alt="tela do app fun box 12" title="tela do app funbox 12"
+                                class="ys-img-responsive ys-thumb-img" />
                         </div>
                     </div>
                 </div>
